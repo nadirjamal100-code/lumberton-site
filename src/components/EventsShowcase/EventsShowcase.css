@@ -1,0 +1,117 @@
+.events__inner {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: var(--space-7);
+  align-items: center;
+}
+
+.events__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.events__content p {
+  margin-top: var(--space-3);
+  max-width: 340px;
+}
+
+.events__content .btn-outline {
+  margin-top: var(--space-5);
+  text-align: left;
+}
+
+.events__media {
+  position: relative;
+  padding: 0 0 var(--space-7) var(--space-7);
+}
+
+.events__card {
+  margin: 0;
+  position: relative;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+}
+
+.events__card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.events__card--main {
+  width: 62%;
+  aspect-ratio: 1 / 1;
+}
+
+.events__card--accent {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 58%;
+  aspect-ratio: 1 / 1;
+  z-index: 2;
+}
+
+.events__card figcaption {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  background: linear-gradient(to bottom, rgba(4, 38, 59, 0.15), rgba(4, 38, 59, 0.55));
+}
+
+.events__title {
+  color: var(--color-white);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.4rem;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+.events__badge {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--color-navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.events__badge img {
+  width: 16px;
+  height: 16px;
+}
+
+@media (max-width: 900px) {
+  .events__inner {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+
+  .events__content {
+    align-items: center;
+    text-align: center;
+  }
+
+  .events__content p {
+    max-width: none;
+  }
+
+  .events__content .btn-outline {
+    text-align: center;
+  }
+
+  .events__media {
+    max-width: 420px;
+    margin-inline: auto;
+    padding: 0 0 var(--space-6) var(--space-6);
+  }
+}

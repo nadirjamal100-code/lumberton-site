@@ -1,0 +1,11 @@
+.partner-strip { padding: var(--space-6) 0 var(--space-7); }
+.partner-strip__heading { text-align:center; font-family:var(--font-body); font-weight:600; font-size:1rem; letter-spacing:.02em; color:#9aa0a6; margin-bottom:var(--space-5); }
+.partner-strip__inner { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:28px 36px; }
+.partner-strip__link { flex:1 1 130px; min-width:0; max-width:170px; height:52px; display:flex; align-items:center; justify-content:center; }
+.partner-strip__link img { display:block; max-width:100%; max-height:42px; width:auto; height:auto; object-fit:contain; opacity:.82; transition:opacity .2s ease,transform .2s ease; }
+.partner-strip__link:hover img,.partner-strip__link:focus-visible img { opacity:1; transform:translateY(-2px); }
+.partner-strip__logo--main-street { max-height:50px !important; }
+.partner-strip__logo--parks { max-height:42px !important; padding:8px 12px; border-radius:6px; background:var(--color-navy); }
+.partner-strip__logo--city { max-height:48px !important; }
+.partner-strip__logo--uncp { max-height:38px !important; }
+@media(max-width:700px) { .partner-strip__inner { justify-content:center; gap:20px 24px; } .partner-strip__link { flex:0 1 130px; } }

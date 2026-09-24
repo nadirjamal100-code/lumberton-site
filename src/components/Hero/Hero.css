@@ -1,0 +1,130 @@
+.hero {
+  position: relative;
+  background: var(--color-white);
+  overflow: hidden;
+}
+
+.hero__bg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  padding-top: max(150px, 15%);
+}
+
+.hero__content {
+  max-width: 640px;
+}
+
+.hero h1 {
+  color: var(--color-white);
+  font-size: var(--fs-hero);
+  line-height: 1.05;
+  font-weight: 800;
+  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
+}
+
+.hero__script {
+  font-family: var(--font-script);
+  font-weight: 400;
+  font-size: 1.5em;
+  line-height: 1;
+  display: inline-block;
+}
+
+.hero__subtitle {
+  margin-top: var(--space-4);
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 1.05rem;
+  max-width: 440px;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
+}
+
+.hero__dots {
+  position: absolute;
+  left: var(--container-pad);
+  bottom: 6%;
+  display: flex;
+  gap: 8px;
+}
+
+.hero__dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1.5px solid var(--color-white);
+  background: transparent;
+  padding: 0;
+}
+
+.hero__dot.is-active {
+  background: var(--color-white);
+}
+
+@media (max-width: 600px) {
+  .hero {
+    min-height: 720px;
+    min-height: min(820px, 100svh);
+    background: var(--color-navy-900);
+  }
+
+  .hero__bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 54% center;
+  }
+
+  .hero__overlay {
+    display: flex;
+    flex-direction: column;
+    padding: 150px 0 84px;
+  }
+
+  .hero__content {
+    max-width: 520px;
+  }
+
+  .hero h1 {
+    max-width: 100%;
+    font-size: clamp(2.65rem, 10.5vw, 3.8rem);
+    line-height: 1;
+  }
+
+  .hero__script {
+    font-size: 1.2em;
+    white-space: nowrap;
+  }
+
+  .hero__subtitle {
+    max-width: 34ch;
+    margin-top: 18px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .hero__dots {
+    left: 20px;
+    bottom: 30px;
+  }
+}
+
+@media (max-width: 360px) {
+  .hero__overlay {
+    padding-top: 142px;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero__script {
+    font-size: 1.15em;
+  }
+}
