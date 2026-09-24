@@ -68,6 +68,14 @@ export default function Header() {
             className={`main-nav__links ${menuOpen ? "is-open" : ""}`}
             aria-label="Primary"
           >
+            <a
+              href="/"
+              className="main-nav__drawer-logo"
+              aria-label="Lumberton Visitors Bureau home"
+              onClick={() => setMenuOpen(false)}
+            >
+              <img src={logo} alt="" aria-hidden="true" />
+            </a>
             <ul>
               {NAV_LINKS.map((link) => {
                 const hasChildren = Boolean(link.children?.length);

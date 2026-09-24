@@ -107,6 +107,10 @@
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
+.main-nav__links .main-nav__drawer-logo {
+  display: none;
+}
+
 .main-nav__links {
   flex: 1;
   display: flex;
@@ -289,6 +293,28 @@
 
   .main-nav__links a {
     font-size: 20px;
+  }
+
+  .main-nav__links .main-nav__drawer-logo {
+    position: absolute;
+    top: 29px;
+    left: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: min(224px, calc(100vw - 104px));
+    height: 74px;
+    padding: 5px 9px;
+    border-radius: 4px;
+    background: #fff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.16);
+  }
+
+  .main-nav__drawer-logo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
 
   .hamburger span {
