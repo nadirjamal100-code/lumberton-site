@@ -5,6 +5,8 @@
 }
 
 .hero__bg {
+  position: relative;
+  z-index: 0;
   display: block;
   width: 100%;
   height: auto;
@@ -12,6 +14,7 @@
 
 .hero__overlay {
   position: absolute;
+  z-index: 1;
   inset: 0;
   padding-top: max(150px, 15%);
 }
@@ -53,16 +56,36 @@
 }
 
 .hero__dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  border: 1.5px solid var(--color-white);
+  display: grid;
+  width: 40px;
+  height: 40px;
+  place-items: center;
+  border: 0;
   background: transparent;
   padding: 0;
+  cursor: pointer;
 }
 
-.hero__dot.is-active {
+.hero__dot::before {
+  width: 12px;
+  height: 12px;
+  border: 1.5px solid var(--color-white);
+  border-radius: 50%;
+  content: "";
+  transition: background-color 180ms ease, transform 180ms ease;
+}
+
+.hero__dot.is-active::before {
   background: var(--color-white);
+}
+
+.hero__dot:hover::before {
+  transform: scale(1.2);
+}
+
+.hero__dot:focus-visible {
+  outline: 2px solid var(--color-white);
+  outline-offset: 4px;
 }
 
 @media (max-width: 600px) {
@@ -112,6 +135,12 @@
   .hero__dots {
     left: 20px;
     bottom: 30px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__dot::before {
+    transition: none;
   }
 }
 
